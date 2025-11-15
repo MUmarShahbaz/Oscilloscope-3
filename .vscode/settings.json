@@ -1,0 +1,16 @@
+{
+    "files.exclude" : {
+        // Sub Sections
+        "_audio"  : true,   // Audio Visualizer
+        "_code"   : true,   // Code
+        "_forms"  : true,   // Google Forms
+        "_hot"    : true,   // HandsOnTable
+        "_maths"  : true,   // Maths
+        "_serial" : true,   // Serial Plotter
+
+        // Excess
+        ".bundle"      : true,
+        "LICENSE.md"   : true,
+        "Gemfile.lock" : true
+    }
+}
