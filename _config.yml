@@ -90,6 +90,7 @@ exclude:
   - .bundle/
   - .vscode/
   - node_modules/
+  - scripts/
   - .gitignore
   - Gemfile
   - Gemfile.lock

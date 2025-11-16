@@ -1,11 +1,11 @@
 {
   "author": "MUmarShahbaz",
   "license": "Apache-2.0",
+  "type": "module",
 
   "scripts": {
-    "tailwind" : "npx @tailwindcss/cli -o ./assets/css/tailwind.css",
-    "serve"    : "npm run tailwind && bundle exec jekyll serve",
-    "build"    : "npm run tailwind && bundle exec jekyll build"
+    "serve"          : "node ./scripts/serve.js",
+    "build"          : "bundle exec jekyll build && cd _site && npx @tailwindcss/cli -o ./assets/css/tailwind.css"
   },
 
   "dependencies": {
