@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     {% include head.liquid %}
-    <title>{{ page.title }}</title>
-</head>
-<body class="bg-sky-500">
-    {{ page.content }}
-</body>
+    <body data-theme="light">
+        {% include navbar.liquid %}
+        {{ content }}
+    </body>
 </html>

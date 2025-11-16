@@ -18,9 +18,38 @@
     }
   </style>
   <script>
+
+    function setTheme(theme) {
+      document.body.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
+    function toggleTheme() {
+      console.log("toggling")
+      const currentTheme = document.body.getAttribute("data-theme");
+      const newTheme = currentTheme === "light" ? "dark" : "light";
+      setTheme(newTheme);
+    }
+    function loadTheme() {
+      let storedTheme = localStorage.getItem("theme") || null;
+      if (storedTheme === null) {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        storedTheme = prefersDark ? "dark" : "light";
+      }
+      if (storedTheme === "dark") {
+        document.getElementById('sun-svg').classList.add('swap-on')
+        document.getElementById('moon-svg').classList.remove('swap-on')
+        document.getElementById('sun-svg').classList.remove('swap-off')
+        document.getElementById('moon-svg').classList.add('swap-off')
+      }
+      return storedTheme;
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       document.documentElement.style.visibility = 'visible';
       document.documentElement.style.opacity = 1;
+      const storedTheme = loadTheme()
+      setTheme(storedTheme);
+      document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
     });
   </script>
 </head>
