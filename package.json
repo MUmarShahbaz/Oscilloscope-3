@@ -1,9 +1,10 @@
 {
   "author": "MUmarShahbaz",
   "license": "Apache-2.0",
-  
+
   "scripts": {
-    "build" : "bundle exec jekyll build"
+    "serve"    : "bundle exec jekyll serve",
+    "build"    : "bundle exec jekyll build"
   },
 
   "dependencies": {
