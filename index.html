@@ -1,11 +1,17 @@
 ---
-layout : default
+layout: default
 ---
+<div class="flex flex-col justify-center gap-4 items-center min-h-screen bg-base-200">
+{% capture modal_content %}
+    <h3 class="text-lg font-bold">Hello there!!</h3>
+    <p class="py-4">This site is a WIP</p>
+{% endcapture %}
 
-<header class="bg-slate-100">
-    <div class="max-w-(--breakpoint-lg) mx-auto h-24 flex items-center">
-        <a href="/">
-            <h1 class="text-black text-3xl font-bold">Jekyll - TailwindCSS Demo</h1>
-        </a>
-    </div>
-</header>
+{% include modal.liquid open_text="NOTICE" id="modal-1" content=modal_content %}
+
+{% capture modal_content %}
+    <h3 class="text-lg font-bold">Oscilloscope Online</h3>
+    <p class="py-4">.....in case you were wondering where you are right now.</p>
+{% endcapture %}
+
+{% include modal.liquid open_text="WEBSITE" id="modal-2" content=modal_content %}</div>
