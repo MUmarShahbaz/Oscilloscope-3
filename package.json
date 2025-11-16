@@ -1,0 +1,23 @@
+{
+  "name": "oscilloscope-online",
+  "description": "Oscilloscope Online is a versatile web-based graphing tool designed to make data visualization quick and intuitive. It supports multiple input formats and provides an easy, streamlined way to convert raw data into clear, informative graphs.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MUmarShahbaz/Oscilloscope-3.git"
+  },
+  "keywords": [],
+  "author": "MUmarShahbaz",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MUmarShahbaz/Oscilloscope-3/issues"
+  },
+  "homepage": "https://github.com/MUmarShahbaz/Oscilloscope-3#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.22",
+    "cssnano": "^7.1.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
+}

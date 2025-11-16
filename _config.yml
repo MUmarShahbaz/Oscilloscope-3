@@ -8,6 +8,7 @@ plugins:
   - jekyll-minifier
   - jekyll_dynamic_assets
   - jekyll-terser
+#  - jekyll-postcss
 
 #====================================
 #             Variables
@@ -18,8 +19,9 @@ baseurl: "/Oscilloscope-3"
 title: Oscilloscope Online
 description: Oscilloscope Online is a versatile web-based graphing tool designed to make data visualization quick and intuitive. It supports multiple input formats and provides an easy, streamlined way to convert raw data into clear, informative graphs.
 lang: "en"
-keywords: [oscilloscope, online, web serial, plotter, electronics, data visualization, signal analysis, customisation, open source]
+keywords: [oscilloscope, online, web serial, plotter, electronics, data visualization, signal analysis, customisation, open source, survey, google forms, maths, code, table, cell, graphing, easy, quick, svg, vector, csv, png, json]
 author: M. Umar Shahbaz
+image: #
 
 #====================================
 #      Collections (Sub Sections)
@@ -40,6 +42,25 @@ collections:
     output: true
 
 #====================================
+#            Head Assets
+#====================================
+
+dynamic_assets:
+  absolute: true
+  source:
+    base: /assets
+    css: /css
+  formats:
+    defer-js: <script defer src="%s"></script>
+    preload-css: <link rel="preload" href="%s" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    noscript-css: <noscript><link rel="stylesheet" href="%s"></noscript>
+    preload-img: <link rel="preload" as="image" href="%s">
+    preload-woff2: <link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>
+  master:
+   - master.css::preload-css
+   - master.css::noscript-css
+
+#====================================
 #         Asset Optimization
 #====================================
 
@@ -55,13 +76,25 @@ terser:
   compress:
     drop_console: true
 
+postcss:
+  cache: false
+
 #====================================
 #              Excludes
 #====================================
 
 exclude:
+  - _site/
+  - .bundle/
+  - .jekyll-cache/
+  - .vscode/
+  - node_modules/
   - .gitignore
   - Gemfile
   - Gemfile.lock
   - LICENSE.md
+  - package-lock.json
+  - package.json
+  - postcss.config.js
   - README.md
+  - tailwind.config.js
