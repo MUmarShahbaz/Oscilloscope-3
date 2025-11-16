@@ -12,4 +12,5 @@ group :jekyll_plugins do
   gem 'jekyll_dynamic_assets'
   gem 'jekyll-minifier'
   gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
+  gem 'jekyll-postcss'
 end

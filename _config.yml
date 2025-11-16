@@ -8,7 +8,7 @@ plugins:
   - jekyll-minifier
   - jekyll_dynamic_assets
   - jekyll-terser
-#  - jekyll-postcss
+  - jekyll-postcss
 
 #====================================
 #             Variables
