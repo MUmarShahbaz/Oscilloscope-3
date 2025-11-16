@@ -3,8 +3,9 @@
   "license": "Apache-2.0",
 
   "scripts": {
-    "serve"    : "bundle exec jekyll serve",
-    "build"    : "bundle exec jekyll build"
+    "tailwind" : "npx @tailwindcss/cli -o ./assets/css/tailwind.css",
+    "serve"    : "npm run tailwind && bundle exec jekyll serve",
+    "build"    : "npm run tailwind && bundle exec jekyll build"
   },
 
   "dependencies": {
