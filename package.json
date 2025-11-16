@@ -1,0 +1,13 @@
+{
+  "author": "MUmarShahbaz",
+  "license": "Apache-2.0",
+  
+  "scripts": {
+    "build" : "bundle exec jekyll build"
+  },
+
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}

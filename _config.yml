@@ -26,17 +26,17 @@ author: M. Umar Shahbaz
 #====================================
 
 collections:
-  serial:
-    output: true
-  hot:
+  audio:
     output: true
   code:
     output: true
   forms:
     output: true
-  audio:
+  hot:
     output: true
   maths:
+    output: true
+  serial:
     output: true
 
 #====================================
@@ -60,8 +60,13 @@ terser:
 #====================================
 
 exclude:
+  - .bundle/
+  - .vscode/
+  - node_modules/
   - .gitignore
   - Gemfile
   - Gemfile.lock
   - LICENSE.md
+  - package.json
+  - package-lock.json
   - README.md

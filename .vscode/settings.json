@@ -9,8 +9,11 @@
         "_serial" : true,   // Serial Plotter
 
         // Excess
-        ".bundle"      : true,
-        "LICENSE.md"   : true,
-        "Gemfile.lock" : true
+        ".bundle"           : true,
+        ".jekyll-cache"     : true,
+        "node_modules"      : true,
+        "LICENSE.md"        : true,
+        "Gemfile.lock"      : true,
+        "package-lock.json" : true
     }
 }
