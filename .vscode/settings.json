@@ -4,9 +4,9 @@
         "_audio"  : true,   // Audio Visualizer
         "_code"   : true,   // Code
         "_forms"  : true,   // Google Forms
-        "_hot"    : true,   // HandsOnTable
         "_maths"  : true,   // Maths
         "_serial" : true,   // Serial Plotter
+        "_table"  : true,   // HandsOnTable
 
         // Excess
         ".bundle"           : true,
@@ -15,5 +15,8 @@
         "LICENSE.md"        : true,
         "Gemfile.lock"      : true,
         "package-lock.json" : true
+    },
+    "yaml.schemas": {
+        "./.vscode/config-schema.json": ["_config.yml"]
     }
 }

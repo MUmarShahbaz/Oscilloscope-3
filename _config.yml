@@ -28,16 +28,22 @@ author: M. Umar Shahbaz
 collections:
   audio:
     output: true
+    name: Audio Visualizer
   code:
     output: true
+    name: Code
   forms:
     output: true
-  hot:
-    output: true
+    name: Google Forms
   maths:
     output: true
+    name: Maths
   serial:
     output: true
+    name: Serial Plotter
+  table:
+    output: true
+    name: Table
 
 #====================================
 #            Head Assets
