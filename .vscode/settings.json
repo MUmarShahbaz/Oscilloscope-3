@@ -12,6 +12,7 @@
         ".bundle"           : true,
         ".jekyll-cache"     : true,
         "node_modules"      : true,
+        "scripts"           : true,
         "LICENSE.md"        : true,
         "Gemfile.lock"      : true,
         "package-lock.json" : true

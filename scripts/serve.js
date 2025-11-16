@@ -8,7 +8,7 @@ create_child('Jekyll', 'bundle exec jekyll serve', undefined, 10)
         .then((child) => { children.push(child); })
         .catch(e => console.log(e));
 
-const tailwind = () => {create_child('Tailwind', 'npx @tailwindcss/cli -o ./assets/css/tailwind.css', './_site', 10)
+const tailwind = () => {create_child('Tailwind', 'npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./_site/assets/css/tailwind.css', undefined , 10)
         .then((child) => { children.push(child); })
         .catch(e => console.log(e));}
 

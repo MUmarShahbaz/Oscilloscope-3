@@ -91,6 +91,7 @@ exclude:
   - .vscode/
   - node_modules/
   - scripts/
+  - assets/css/tailwind.css
   - .gitignore
   - Gemfile
   - Gemfile.lock
