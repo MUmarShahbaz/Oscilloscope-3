@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include head.liquid %}
-    <body data-theme="light">
+    <body data-theme="light" class="min-h-screen flex flex-col">
         {% include navbar.liquid %}
-        {{ content }}
+        <main class="flex-1">{{ content }}</main>
+        {% include footer.liquid %}
     </body>
 </html>

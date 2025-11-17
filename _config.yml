@@ -50,6 +50,9 @@ collections:
     output: true
     name: Table
     permalink: table
+  tools:
+    output: true
+    permalink: tools
 
 #====================================
 #            Head Assets
@@ -69,8 +72,6 @@ dynamic_assets:
   master:
    - tailwind.css::preload-css
    - tailwind.css::noscript-css
-   - master.css::preload-css
-   - master.css::noscript-css
 
 #====================================
 #         Asset Optimization
