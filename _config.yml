@@ -29,30 +29,30 @@ collections:
   audio:
     output: true
     name: Audio Visualizer
-    permalink: audio
+    permalink: audio/
   code:
     output: true
     name: Code
-    permalink: code
+    permalink: code/
   forms:
     output: true
     name: Google Forms
-    permalink: forms
+    permalink: forms/
   maths:
     output: true
     name: Maths
-    permalink: maths
+    permalink: maths/
   serial:
     output: true
     name: Serial Plotter
-    permalink: serial
+    permalink: serial/
   table:
     output: true
     name: Table
-    permalink: table
+    permalink: table/
   tools:
     output: true
-    permalink: tools
+    permalink: tools/
 
 #====================================
 #            Head Assets
