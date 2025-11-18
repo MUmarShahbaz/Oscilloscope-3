@@ -1,17 +1,70 @@
 ---
 layout: default
 ---
-<div class="flex flex-col justify-center gap-4 items-center min-h-screen bg-base-200">
-{% capture modal_content %}
-    <h3 class="text-lg font-bold">Hello there!!</h3>
-    <p class="py-4">This site is a WIP</p>
-{% endcapture %}
 
-{% include modal.liquid open_text="NOTICE" id="modal-1" content=modal_content %}
+<header class="min-h-screen flex flex-col">
+	<div class="relative h-[65vh] md:h-[50vh]">
+		<canvas id="live-graph-effect" class="h-[65vh] md:h-[50vh] w-full"></canvas>
+		<div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent">
+		</div>
+	</div>
+	<div class="flex-1 flex justify-center items-center">
+		<div class="p-5">
+			<h1 class="w-full text-center text-3xl sm:text-6xl sm:m-5">Oscilloscope Online</h1>
+			<p class="w-full text-center text-base sm:text-xl">Anything can be plotted!</p>
+		</div>
+	</div>
+</header>
 
-{% capture modal_content %}
-    <h3 class="text-lg font-bold">Oscilloscope Online</h3>
-    <p class="py-4">.....in case you were wondering where you are right now.</p>
-{% endcapture %}
+<script>
+	addEventListener('DOMContentLoaded', () => {
+		const canvas = document.getElementById('live-graph-effect');
+		const ctx = canvas.getContext('2d');
+		let width, height, t = 0;
 
-{% include modal.liquid open_text="WEBSITE" id="modal-2" content=modal_content %}</div>
+		function resize_canvas() {
+			w = canvas.width = canvas.offsetWidth;
+			h = canvas.height = canvas.offsetHeight;
+		}
+		resize_canvas();
+		addEventListener('resize', resize_canvas);
+
+		const lines = [
+			{ c: '#00ffff', p: 0 },
+			{ c: '#ff00ff', p: 2.1 },
+			{ c: '#ffff00', p: 4.2 }
+		];
+
+		function draw() {
+			ctx.fillStyle = 'rgba(0,0,0,0.07)';
+			ctx.fillRect(0, 0, w, h);
+			t += 0.5;
+
+			lines.forEach((ln, i) => {
+				const slow = Math.sin(t * 0.0002 + i) * 0.4 + 1;
+				const drift = Math.sin(t * 0.00015) * 60;
+
+				ctx.strokeStyle = ln.c;
+				ctx.lineWidth = 3;
+				ctx.beginPath();
+
+				for (let x = 0; x < w; x += 3) {
+					const phase = t * 0.09 + ln.p + i * 1.7;
+
+					const y = h / 2
+						+ Math.sin(x * 0.007 + phase) * 100 * slow
+						+ Math.sin(x * 0.013 + phase * 1.4) * 70 * slow
+						+ Math.sin(x * 0.004 + phase * 0.6) * 130
+						+ Math.sin(x * 0.0011 + t * 0.03) * 80
+						+ drift;
+
+					x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+				}
+				ctx.stroke();
+			});
+
+			requestAnimationFrame(draw);
+		}
+		draw();
+	});
+</script>
