@@ -2,7 +2,7 @@ const { spawn, execSync } = require('child_process');
 const path = require('path');
 
 function create_child(label, command, dir = process.cwd(), pad = null) {
-    if (pad) label = label.padEnd(pad, ' ');
+    if (pad) label = label.padStart(Math.floor((pad - label.length)/2 + label.length), ' ').padEnd(pad, ' ')
     return new Promise((resolve, reject) => {
         const child = spawn('cmd.exe', ['/c', command], { cwd: path.resolve(dir) });
 
