@@ -7,6 +7,7 @@
         "_maths"  : true,   // Maths
         "_serial" : true,   // Serial Plotter
         "_table"  : true,   // HandsOnTable
+        "_tools"  : true,   // Post-plotting Tools
 
         // Excess
         ".bundle"           : true,

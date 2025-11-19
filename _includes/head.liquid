@@ -10,13 +10,7 @@
   {% inject_assets %}
   {% seo %}
 
-  <!-- Prevent FOUC -->
-  <style>
-    html {
-      visibility: hidden;
-      opacity: 0;
-    }
-  </style>
+  <!-- Theme -->
   <script>
 
     function setTheme(theme) {
@@ -45,8 +39,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-      document.documentElement.style.visibility = 'visible';
-      document.documentElement.style.opacity = 1;
       const storedTheme = loadTheme()
       setTheme(storedTheme);
       document.getElementById("theme-toggle").addEventListener("click", toggleTheme);

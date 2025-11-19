@@ -20,7 +20,7 @@ layout: default
 	addEventListener('DOMContentLoaded', () => {
 		const canvas = document.getElementById('live-graph-effect');
 		const ctx = canvas.getContext('2d');
-		let width, height, t = 0;
+		let w, h, t = 0;
 
 		function resize_canvas() {
 			w = canvas.width = canvas.offsetWidth;
