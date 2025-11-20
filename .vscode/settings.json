@@ -10,6 +10,7 @@
         "_tools"  : true,   // Post-plotting Tools
 
         // Excess
+        "_plugins"          : true,
         ".bundle"           : true,
         ".jekyll-cache"     : true,
         "node_modules"      : true,
