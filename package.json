@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "serve": "node ./scripts/serve.js",
-    "build": "bundle exec jekyll build && cd _site && npx @tailwindcss/cli -o ./assets/css/tailwind.css"
+    "build": "bundle exec jekyll build && npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./_site/assets/css/tailwind.css --minify"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",

@@ -10,7 +10,7 @@ create_child('Jekyll', 'bundle exec jekyll serve', undefined, 10)
 
 let tailwind_is_running = false;
 
-const tailwind = () => { tailwind_is_running = true; create_child('Tailwind', 'npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./_site/assets/css/tailwind.css', undefined , 10)
+const tailwind = () => { tailwind_is_running = true; create_child('Tailwind', 'npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./_site/assets/css/tailwind.css --minify', undefined , 10)
         .then((child) => { children.push(child); tailwind_is_running = false; })
         .catch((e) => { console.log(e); tailwind_is_running = false; }); }
 

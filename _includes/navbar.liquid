@@ -9,7 +9,7 @@
             <li>
                 <details>
                     <summary>Plotters</summary>
-                    <ul class="bg-base-100 rounded-t-none p-2 w-40">
+                    <ul class="bg-base-100 rounded-t-none p-2 w-40 z-9999">
                         {% for this_collection in site.collections %}
                         {% if this_collection.name %}
                         <li><a href="{{ this_collection.permalink | absolute_url }}">{{ this_collection.name }}</a></li>
@@ -21,7 +21,7 @@
             <li>
                 <details>
                     <summary>Tools</summary>
-                    <ul class="bg-base-100 rounded-t-none p-2 w-40">
+                    <ul class="bg-base-100 rounded-t-none p-2 w-40 z-9999">
                         {% for tool in site.tools %}
                         <li><a href="{{ tool.permalink | absolute_url }}">{{ tool.title }}</a></li>
                         {% endfor %}
@@ -52,7 +52,7 @@
                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                 </div>
             </div>
-            <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-9999 mt-3 w-52 p-2 shadow">
                 <li><a>Profile</a></li>
                 <li><a>Settings</a></li>
                 <li><a>Logout</a></li>
