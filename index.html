@@ -25,7 +25,7 @@ title: Home
 {% capture how_secure_is_it %}{% endcapture %}
 
 <article class="mx-auto my-5 w-9/10 md:w-7/10">
-	<h2 class="text-4xl text-primary text-center m-5" >What is Oscilloscope Online?</h2>
+	<h2 class="text-4xl text-center m-5" >What is Oscilloscope Online?</h2>
 	{% include accordion.liquid checked=true  title="What does it do?"   classes="rounded-b-none" content=what_does_it_do %}
 	{% include accordion.liquid checked=false title="How does it work?"  classes="rounded-none" content=how_does_it_work %}
 	{% include accordion.liquid checked=false title="What does it cost?" classes="rounded-none" content=what_does_it_cost %}
@@ -35,15 +35,15 @@ title: Home
 <hr class="border-t-2 border-base-300 w-9/10 mx-auto my-12">
 
 <section id="new_plot" class="mx-auto my-5 w-9/10 md:w-7/10">
-	<h2 class="text-4xl text-primary text-center m-5">Plot Something!</h2>
+	<h2 class="text-4xl text-center m-5">Plot Something!</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 		{% for this_collection in site.collections %}{% if this_collection.name %}
-			<a href="{{ this_collection.permalink }}" class="relative block w-full overflow-hidden rounded-xl border-base-300 border-2">
+			<a href="{{ this_collection.permalink }}" class="relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
 		  		<img
-					src="{{ this_collection.images.btn }}" 
+					src="{{ this_collection.images.btn | absolute_url }}"
 					alt="{{ this_collection.name }}"
 					class="h-[120px] w-full object-cover">
-				<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-100 to-60%"></div>
+				<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
 				<div class="absolute inset-y-0 right-5 flex items-center text-end">{{ this_collection.name }}</div>
 			</a>
 		{% endif %}{% endfor %}
