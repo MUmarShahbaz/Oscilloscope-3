@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<header class="min-h-screen flex flex-col">
+<header class="min-h-screen flex flex-col" aria-label="Hero">
 	<div class="relative h-[65vh] md:h-[50vh]">
 		<canvas id="live-graph-effect" class="h-[65vh] md:h-[50vh] w-full"></canvas>
 		<div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent">
@@ -24,7 +24,7 @@ title: Home
 {% capture what_does_it_cost %}{% endcapture %}
 {% capture how_secure_is_it %}{% endcapture %}
 
-<article class="mx-auto my-5 w-9/10 md:w-7/10">
+<article class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="What is Oscilloscope Online?">
 	<h2 class="text-4xl text-center m-5" >What is Oscilloscope Online?</h2>
 	{% include accordion.liquid checked=true  title="What does it do?"   classes="rounded-b-none" content=what_does_it_do %}
 	{% include accordion.liquid checked=false title="How does it work?"  classes="rounded-none" content=how_does_it_work %}
@@ -34,7 +34,7 @@ title: Home
 
 <hr class="border-t-2 border-base-300 w-9/10 mx-auto my-12">
 
-<section id="new_plot" class="mx-auto my-5 w-9/10 md:w-7/10">
+<section id="new_plot" class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="New Plot">
 	<h2 class="text-4xl text-center m-5">Plot Something!</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 		{% for this_collection in site.collections %}{% if this_collection.name %}

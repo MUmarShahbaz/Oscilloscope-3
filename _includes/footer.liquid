@@ -1,4 +1,4 @@
-<footer class="footer sm:footer-horizontal bg-base-200 text-base-content border-base-300 border-t p-10">
+<footer><div class="footer sm:footer-horizontal bg-base-200 text-base-content border-base-300 border-t p-10">
   <nav>
     <h6 class="footer-title">More</h6>
     <a href="{{ '/' | absolute_url }}" class="link link-hover">Home</a>
@@ -19,8 +19,8 @@
     <a href="{{ tool.permalink | absolute_url }}" class="link link-hover">{{ tool.title }}</a>
     {% endfor %}
   </nav>
-</footer>
-<footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
+</div>
+<div class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
   <aside class="grid-flow-col items-center">
     <svg
       width="24"
@@ -39,4 +39,5 @@
       Anything can be plotted!
     </p>
   </aside>
+</div>
 </footer>
