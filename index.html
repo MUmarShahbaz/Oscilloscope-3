@@ -46,13 +46,13 @@ title: Home
 	<h2 class="text-4xl text-center m-5">Plot Something!</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 		{% for this_collection in site.collections %}{% if this_collection.name %}
-			<a href="{{ this_collection.permalink }}" class="relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
+			<a href="{{ this_collection.permalink }}" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
 		  		<img
 					src="{{ this_collection.images.btn | absolute_url }}"
 					alt="{{ this_collection.name }}"
 					class="h-[120px] w-[65%] object-cover">
 				<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
-				<div class="absolute inset-y-0 right-5 flex items-center text-end">{{ this_collection.name }}</div>
+				<div class="group-hover:scale-110 group-focus-visible:scale-110 transition-all duration-300 ease-out absolute inset-y-0 right-5 flex items-center text-end">{{ this_collection.name }}</div>
 			</a>
 		{% endif %}{% endfor %}
 	</div>
