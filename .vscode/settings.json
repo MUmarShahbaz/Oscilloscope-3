@@ -21,5 +21,8 @@
     },
     "yaml.schemas": {
         "./.vscode/config-schema.json": ["_config.yml"]
+    },
+    "files.associations": {
+        "*.html": "liquid"
     }
 }
