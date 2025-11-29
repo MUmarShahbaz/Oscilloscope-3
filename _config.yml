@@ -31,37 +31,37 @@ collections:
     output: true
     name: Audio Visualizer
     images:
-      btn: /assets/img/plotter_audio_md.jpg
+      btn: assets/img/plotter_audio_md.jpg
     permalink: audio/
   code:
     output: true
     name: Code
     images:
-      btn: /assets/img/plotter_code_md.jpg
+      btn: assets/img/plotter_code_md.jpg
     permalink: code/
   forms:
     output: true
     name: Google Forms
     images:
-      btn: /assets/img/plotter_form_md.jpg
+      btn: assets/img/plotter_form_md.jpg
     permalink: forms/
   maths:
     output: true
     name: Maths
     images:
-      btn: /assets/img/plotter_math_md.jpg
+      btn: assets/img/plotter_math_md.jpg
     permalink: maths/
   serial:
     output: true
     name: Serial Plotter
     images:
-      btn: /assets/img/plotter_serial_md.jpg
+      btn: assets/img/plotter_serial_md.jpg
     permalink: serial/
   table:
     output: true
     name: Table
     images:
-      btn: /assets/img/plotter_table_md.jpg
+      btn: assets/img/plotter_table_md.jpg
     permalink: table/
   tools:
     output: true
