@@ -16,6 +16,7 @@ plugins:
 url: "https://mumarshahbaz.github.io"
 baseurl: "/Oscilloscope-3"
 title: Oscilloscope Online
+motto: Anything can be plotted!
 description: Oscilloscope Online is a versatile web-based graphing tool designed to make data visualization quick and intuitive. It supports multiple input formats and provides an easy, streamlined way to convert raw data into clear, informative graphs.
 lang: "en"
 keywords: [oscilloscope, online, web serial, plotter, electronics, data visualization, signal analysis, customisation, open source]
@@ -95,7 +96,7 @@ sass:
   quiet_deps: false
 
 jekyll-minifier:
-  compress_javascript: false
+  compress_javascript: true
 
 terser:
   compress:
