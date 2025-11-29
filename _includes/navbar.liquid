@@ -10,10 +10,8 @@
                 <details>
                     <summary>Plotters</summary>
                     <ul class="bg-base-100 rounded-t-none p-2 w-40 z-9999">
-                        {% for this_collection in site.collections %}
-                        {% if this_collection.name %}
-                        <li><a href="{{ this_collection.permalink | absolute_url }}">{{ this_collection.name }}</a></li>
-                        {% endif %}
+                        {% for this_plotter in site.plotters %}
+                        <li><a href="{{ this_plotter.permalink | absolute_url }}">{{ this_plotter.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </details>

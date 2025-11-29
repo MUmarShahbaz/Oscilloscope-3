@@ -7,10 +7,8 @@
   </nav>
   <nav>
     <h6 class="footer-title">Plotters</h6>
-    {% for this_collection in site.collections %}
-    {% if this_collection.name %}
-    <a href="{{ this_collection.permalink | absolute_url }}" class="link link-hover">{{ this_collection.name }}</a>
-    {% endif %}
+    {% for this_plotter in site.plotters %}
+    <a href="{{ this_plotter.permalink | absolute_url }}" class="link link-hover">{{ this_plotter.title }}</a>
     {% endfor %}
   </nav>
   <nav>
