@@ -522,15 +522,6 @@
                     "type": "string",
                     "minLength": 1
                   }
-                },
-                "name": {
-                  "description": "Name of this collection. Use for more descriptive naming.",
-                  "type": "string"
-                },
-                "images": {
-                  "description": "Images realted to this topic",
-                  "type": "object",
-                  "additionalProperties": true
                 }
               },
               "additionalProperties": false

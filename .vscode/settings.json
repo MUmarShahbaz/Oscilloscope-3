@@ -1,13 +1,8 @@
 {
     "files.exclude" : {
         // Sub Sections
-        "_audio"  : true,   // Audio Visualizer
-        "_code"   : true,   // Code
-        "_forms"  : true,   // Google Forms
-        "_maths"  : true,   // Maths
-        "_serial" : true,   // Serial Plotter
-        "_table"  : true,   // HandsOnTable
-        "_tools"  : true,   // Post-plotting Tools
+        "_plotters" : false,   // Plotting Tools
+        "_tools"    : false,   // Post-plotting Tools
 
         // Excess
         "_plugins"          : true,
