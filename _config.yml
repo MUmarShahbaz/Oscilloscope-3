@@ -41,6 +41,7 @@ dynamic_assets:
   source:
     base: /assets
     css: /css
+    js: /js
   formats:
     defer-js: <script defer src="%s"></script>
     css: <link rel="stylesheet" href="%s">
@@ -50,6 +51,9 @@ dynamic_assets:
   master:
    - tailwind.css::css
    - tailwind.css::preload-css
+   - lib.css::css
+   - lib.css::preload-css
+   - aos.min.js::defer-js
 
 #====================================
 #         Asset Optimization
