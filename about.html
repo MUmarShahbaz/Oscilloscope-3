@@ -1,0 +1,63 @@
+---
+layout: default
+title: About
+---
+
+<div
+	class="flex flex-col lg:flex-row justify-center items-center min-h-[90vh] p-5"
+	role="banner"
+	aria-label="Author">
+	<figure
+		class="w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] rounded-full overflow-hidden"
+		aria-label="Author image"
+		data-aos="fade-up">
+		<img
+			src="{{ 'assets/img/profile_picture.jpg' | absolute_url }}"
+			alt="Profile Picture"
+			class="w-full">
+	</figure>
+	<div class="flex flex-col justify-center items-center">
+		<div class="p-5">
+			<h1
+				class="w-full text-center text-3xl sm:text-6xl sm:m-5"
+				aria-label="Author name"
+				data-aos="fade-up">M. Umar Shahbaz</h1>
+			<p
+				class="w-full text-center text-base sm:text-xl"
+				aria-label="Author description"
+				data-aos="fade-up">Student Developer from Paksitan</p>
+		</div>
+		<a
+			href="https://m-umar.me/"
+			class="btn btn-lg btn-primary"
+			role="button"
+			aria-label="Author website"
+			data-aos="fade-up">Visit my Website!!</a>
+	</div>
+</div>
+
+<section class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="Socials">
+	<h2 class="text-4xl text-center m-5" data-aos="fade-up">Socials</h2>
+	<div class="flex flex-wrap justify-evenly items-center">
+		{% for social in site.data.socials %}
+			<a href="{{ social.url }}" title="{{ social.name }}">
+				{% capture icon %}<span class="{{ social.icon }} text-6xl mx-auto my-10"></span>{% endcapture %}
+				{% include card.liquid img_raw=icon title=social.name aos="fade-up" class="mb-5 w-[200px]" %}
+			</a>
+		{% endfor %}
+	</div>
+</section>
+
+<section class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="Libraries and Tools">
+	<h2 class="text-4xl text-center m-5" data-aos="fade-up">Libraries & Tools</h2>
+	<div class="flex flex-wrap justify-evenly items-center">
+		{% include card.liquid img_raw='<span class="devicon-tailwindcss-plain text-6xl mx-auto my-10"></span>' title="TailwindCSS" aos="fade-up" class="mb-5 w-[200px]" %}
+		{% include card.liquid img_raw='<span class="devicon-jekyll-plain text-6xl mx-auto my-10"></span>' title="Jekyll" aos="fade-up" class="mb-5 w-[200px]" %}
+		{% include card.liquid img_raw='<span class="devicon-github-original text-6xl mx-auto my-10"></span>' title="GitHub" aos="fade-up" class="mb-5 w-[200px]" %}
+		{% include card.liquid img_raw='<span class="devicon-ruby-plain text-6xl mx-auto my-10"></span>' title="Ruby" aos="fade-up" class="mb-5 w-[200px]" %}
+		{% include card.liquid img_raw='<span class="devicon-nodejs-plain text-6xl mx-auto my-10"></span>' title="NodeJS" aos="fade-up" class="mb-5 w-[200px]" %}
+		{% include card.liquid img_raw='<span class="devicon-javascript-plain text-6xl mx-auto my-10"></span>' title="JavaScript" aos="fade-up" class="mb-5 w-[200px]" %}
+		{% include card.liquid img_raw='<span class="devicon-typescript-plain text-6xl mx-auto my-10"></span>' title="TypeScript" aos="fade-up" class="mb-5 w-[200px]" %}
+		{% include card.liquid img_raw='<span class="devicon-docker-plain text-6xl mx-auto my-10"></span>' title="Docker" aos="fade-up" class="mb-5 w-[200px]" %}
+	</div>
+</section>

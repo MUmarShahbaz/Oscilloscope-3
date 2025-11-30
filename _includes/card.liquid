@@ -6,9 +6,13 @@
 	{% if include.aos %}
 	data-aos="{{ include.aos }}"
 	{% endif %}>
-	<figure>
-		<img src="{{ include.img | absolute_url }}" alt="{{ include.title }}" />
-	</figure>
+	{% if include.img %}
+		<figure>
+			<img src="{{ include.img | absolute_url }}" alt="{{ include.title }}" />
+		</figure>
+	{% elsif include.img_raw %}
+		{{ include.img_raw }}
+	{% endif %}
 	<div class="card-body">
 		<h2 class="card-title justify-center">{{ include.title }}</h2>
 		{% if include.raw %}
