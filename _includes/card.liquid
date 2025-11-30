@@ -1,0 +1,26 @@
+<div
+	{% if include.id %}
+	id="{{ include.id }}"
+	{% endif %}
+	class="card bg-base-300 w-96 shadow-sm {{ include.class }}"
+	{% if include.aos %}
+	data-aos="{{ include.aos }}"
+	{% endif %}>
+	<figure>
+		<img src="{{ include.img | absolute_url }}" alt="{{ include.title }}" />
+	</figure>
+	<div class="card-body">
+		<h2 class="card-title justify-center">{{ include.title }}</h2>
+		{% if include.raw %}
+			{{ include.raw }}
+			{% if include.description %}
+				<p>{{ include.description }}</p>
+			{% endif %}
+			{% if include.buttons %}
+				<div class="card-actions justify-center">
+					{{ include.buttons }}
+				</div>
+			{% endif %}
+		{% endif %}
+	</div>
+</div>
