@@ -6,12 +6,14 @@
 
         // Excess
         "_plugins"          : true,
+        "_sass"             : true,
         ".bundle"           : true,
+        ".github"           : true,
         ".jekyll-cache"     : true,
         "node_modules"      : true,
         "scripts"           : true,
-        "LICENSE.md"        : true,
         "Gemfile.lock"      : true,
+        "LICENSE.md"        : true,
         "package-lock.json" : true
     },
     "yaml.schemas": {
@@ -19,5 +21,16 @@
     },
     "files.associations": {
         "*.html": "liquid"
-    }
+    },
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "liquid.engine": "jekyll",
+	"liquid.format.rules": {
+		"indentSize": 1,
+		"indentChar": "\t",
+	},
+	"[liquid]": {
+		"editor.formatOnSave": true
+	}
 }
