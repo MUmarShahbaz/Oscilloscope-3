@@ -1,31 +1,32 @@
 {
-    "files.exclude" : {
-        // Sub Sections
-        "_plotters" : false,   // Plotting Tools
-        "_tools"    : false,   // Post-plotting Tools
-
-        // Excess
-        "_plugins"          : true,
-        "_sass"             : true,
-        ".bundle"           : true,
-        ".github"           : true,
-        ".jekyll-cache"     : true,
-        "node_modules"      : true,
-        "scripts"           : true,
-        "Gemfile.lock"      : true,
-        "LICENSE.md"        : true,
-        "package-lock.json" : true
-    },
-    "yaml.schemas": {
-        "./.vscode/config-schema.json": ["_config.yml"]
-    },
-    "files.associations": {
-        "*.html": "liquid"
-    },
-    "editor.tabSize": 4,
-    "editor.insertSpaces": false,
-    "editor.detectIndentation": false,
-    "liquid.engine": "jekyll",
+	"files.exclude": {
+		// Sub Sections
+		"_plotters": false, // Plotting Tools
+		"_tools": false, // Post-plotting Tools
+		// Excess
+		"_plugins": true,
+		"_sass": true,
+		".bundle": true,
+		".github": true,
+		".jekyll-cache": true,
+		"node_modules": true,
+		"scripts": true,
+		"Gemfile.lock": true,
+		"LICENSE.md": true,
+		"package-lock.json": true
+	},
+	"yaml.schemas": {
+		"./.vscode/config-schema.json": [
+			"_config.yml"
+		]
+	},
+	"files.associations": {
+		"*.html": "liquid"
+	},
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"liquid.engine": "jekyll",
 	"liquid.format.rules": {
 		"indentSize": 1,
 		"indentChar": "\t",

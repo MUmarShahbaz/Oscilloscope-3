@@ -1,16 +1,19 @@
 <div>
 
-  <label for="{{ include.id }}" class="btn btn-primary">{{ include.open_text }}</label>
-  <input type="checkbox" id="{{ include.id }}" class="modal-toggle" />
+	<label for="{{ include.id }}" class="btn btn-primary">{{ include.open_text }}</label>
+	<input
+		type="checkbox"
+		id="{{ include.id }}"
+		class="modal-toggle" />
 
-  
-  <div class="modal" role="dialog">
-    <div class="modal-box relative">
-      <label for="{{ include.id }}" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-        {{ include.content }}
-    </div>
 
-    <label class="modal-backdrop" for="{{ include.id }}">Close</label>
-  </div>
+	<div class="modal" role="dialog">
+		<div class="modal-box relative">
+			<label for="{{ include.id }}" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+			{{ include.content }}
+		</div>
+
+		<label class="modal-backdrop" for="{{ include.id }}">Close</label>
+	</div>
 
 </div>

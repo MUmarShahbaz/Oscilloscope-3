@@ -3,11 +3,13 @@ layout: default
 title: Home
 ---
 
-<div class="min-h-screen flex flex-col" role="banner" aria-label="Hero">
+<div
+	class="min-h-screen flex flex-col"
+	role="banner"
+	aria-label="Hero">
 	<div class="relative h-[65vh] md:h-[50vh]">
 		<canvas id="live-graph-effect" class="h-[65vh] md:h-[50vh] w-full"></canvas>
-		<div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent">
-		</div>
+		<div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent"></div>
 	</div>
 	<div class="flex-1 flex justify-center items-center">
 		<div class="p-5">
@@ -19,19 +21,26 @@ title: Home
 
 <hr class="border-0 my-12" aria-hidden="true">
 
-<section id="new_plot" class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="New Plot">
+<section
+	id="new_plot"
+	class="mx-auto my-5 w-9/10 md:w-7/10"
+	aria-label="New Plot">
 	<h2 class="text-4xl text-center m-5" data-aos="fade-up">Plot Something!</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-5" role="list" aria-label="Plotters">
+	<div
+		class="grid grid-cols-1 md:grid-cols-2 gap-5"
+		role="list"
+		aria-label="Plotters">
 		{% for this_plotter in site.plotters %}
 			<div data-aos="fade-up">
-			<a href="{{ this_plotter.permalink | absolute_url }}" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
-				<img
-					src="{{ this_plotter.images.btn | absolute_url }}"
-					alt="{{ this_plotter.title }}"
-					class="h-[120px] w-[65%] object-cover">
-				<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
-				<div class="group-hover:scale-110 group-focus-visible:scale-110 transition-all duration-300 ease-out absolute inset-y-0 right-5 flex items-center text-end">{{ this_plotter.title }}</div>
-			</a></div>
+				<a href="{{ this_plotter.permalink | absolute_url }}" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
+					<img
+						src="{{ this_plotter.images.btn | absolute_url }}"
+						alt="{{ this_plotter.title }}"
+						class="h-[120px] w-[65%] object-cover">
+					<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
+					<div class="group-hover:scale-110 group-focus-visible:scale-110 transition-all duration-300 ease-out absolute inset-y-0 right-5 flex items-center text-end">{{ this_plotter.title }}</div>
+				</a>
+			</div>
 		{% endfor %}
 	</div>
 </section>
@@ -40,17 +49,21 @@ title: Home
 
 <section class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="Toolbox">
 	<h2 class="text-4xl text-center m-5" data-aos="fade-up">Toolbox!</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-5" role="list" aria-label="Other Tools">
+	<div
+		class="grid grid-cols-1 md:grid-cols-2 gap-5"
+		role="list"
+		aria-label="Other Tools">
 		{% for this_tool in site.tools %}
 			<div data-aos="fade-up">
-			<a href="{{ this_tool.permalink | absolute_url }}" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
-				<img
-					src="{{ this_tool.images.btn | absolute_url }}"
-					alt="{{ this_tool.title }}"
-					class="h-[120px] w-[65%] object-cover">
-				<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
-				<div class="group-hover:scale-110 group-focus-visible:scale-110 transition-all duration-300 ease-out absolute inset-y-0 right-5 flex items-center text-end">{{ this_tool.title }}</div>
-			</a></div>
+				<a href="{{ this_tool.permalink | absolute_url }}" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
+					<img
+						src="{{ this_tool.images.btn | absolute_url }}"
+						alt="{{ this_tool.title }}"
+						class="h-[120px] w-[65%] object-cover">
+					<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
+					<div class="group-hover:scale-110 group-focus-visible:scale-110 transition-all duration-300 ease-out absolute inset-y-0 right-5 flex items-center text-end">{{ this_tool.title }}</div>
+				</a>
+			</div>
 		{% endfor %}
 	</div>
 </section>
@@ -70,9 +83,10 @@ title: Home
 		<div class="grid md:grid-cols-2 gap-12 lg:gap-16">
 			<!-- Column 1 -->
 			<div class="space-y-12">
- 				<section aria-label="Purpose">
+				<section aria-label="Purpose">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-wave-square" aria-hidden="true"></span> What does it do?
+						<span class="text-3xl fas fa-wave-square" aria-hidden="true"></span>
+						What does it do?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						Oscilloscope Online turns raw numbers into beautiful, interactive graphs in seconds. Perfect for students exploring functions, engineers monitoring sensors, researchers plotting survey data, or musicians visualizing audio waveforms.
@@ -84,7 +98,8 @@ title: Home
 
 				<section aria-label="Working">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-gear" aria-hidden="true"></span> How does it work?
+						<span class="text-3xl fas fa-gear" aria-hidden="true"></span>
+						How does it work?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						Built with Jekyll + Tailwind CSS + DaisyUI for instant updates and a polished, responsive design. All plotting, data processing, and real-time visualization is written in TypeScript and runs entirely in your browser — no servers, no data upload unless you explicitly save to your own Google Drive.
@@ -99,7 +114,8 @@ title: Home
 			<div class="space-y-12">
 				<section aria-label="Payments">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-credit-card" aria-hidden="true"></span> What does it cost?
+						<span class="text-3xl fas fa-credit-card" aria-hidden="true"></span>
+						What does it cost?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						Absolutely nothing — forever. No ads, no paywalls, no subscriptions, no feature locks. Every tool, export option, and plotter is 100% free for everyone.
@@ -111,7 +127,8 @@ title: Home
 
 				<section aria-label="Security">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-user-lock" aria-hidden="true"></span> How secure & private is it?
+						<span class="text-3xl fas fa-user-lock" aria-hidden="true"></span>
+						How secure & private is it?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						The site is completely static: plain HTML/CSS/JS served from a CDN. There is no backend, no database, and no server-side code that could ever be compromised.
@@ -123,7 +140,10 @@ title: Home
 			</div>
 		</div>
 
-		<div class="mt-16 text-center" role="button" data-aos="fade-up">
+		<div
+			class="mt-16 text-center"
+			role="button"
+			data-aos="fade-up">
 			<a href="{{ '/index.html#new_plot' | absolute_url }}" class="inline-flex items-center px-8 py-4 bg-black text-white font-medium rounded-xl hover:bg-gray-800 transition shadow-lg text-lg">
 				Start Plotting!!
 			</a>
@@ -134,56 +154,56 @@ title: Home
 <hr class="border-0 my-30" aria-hidden="true">
 
 {% script %}
-<script>
-	addEventListener('DOMContentLoaded', () => {
+	<script>
+			addEventListener('DOMContentLoaded', () => {
 		const canvas = document.getElementById('live-graph-effect');
 		const ctx = canvas.getContext('2d');
 		let w, h, t = 0;
-
+		
 		function resize_canvas() {
 			w = canvas.width = canvas.offsetWidth;
 			h = canvas.height = canvas.offsetHeight;
 		}
 		resize_canvas();
 		addEventListener('resize', resize_canvas);
-
+		
 		const lines = [
 			{ c: '#00ffff', p: 0 },
 			{ c: '#ff00ff', p: 2.1 },
 			{ c: '#ffff00', p: 4.2 }
 		];
-
+		
 		function draw() {
 			ctx.fillStyle = 'rgba(0,0,0,0.07)';
 			ctx.fillRect(0, 0, w, h);
 			t += 0.5;
-
+		
 			lines.forEach((ln, i) => {
 				const slow = Math.sin(t * 0.0002 + i) * 0.4 + 1;
 				const drift = Math.sin(t * 0.00015) * 60;
-
+		
 				ctx.strokeStyle = ln.c;
 				ctx.lineWidth = 3;
 				ctx.beginPath();
-
+		
 				for (let x = 0; x < w; x += 3) {
 					const phase = t * 0.09 + ln.p + i * 1.7;
-
+		
 					const y = h / 2
 						+ Math.sin(x * 0.007 + phase) * 100 * slow
 						+ Math.sin(x * 0.013 + phase * 1.4) * 70 * slow
 						+ Math.sin(x * 0.004 + phase * 0.6) * 130
 						+ Math.sin(x * 0.0011 + t * 0.03) * 80
 						+ drift;
-
+		
 					x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
 				}
 				ctx.stroke();
 			});
-
+		
 			requestAnimationFrame(draw);
 		}
 		draw();
-	});
-</script>
+			});
+	</script>
 {% endscript %}

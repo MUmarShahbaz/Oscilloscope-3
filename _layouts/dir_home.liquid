@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.liquid %}
-    <body data-theme="light" class="min-h-screen flex flex-col">
-        {% include navbar.liquid %}
-        <main class="flex-1">
-            <div class="min-h-screen flex flex-col" role="banner" aria-label="Hero">
-            	<div class="relative h-[65vh] md:h-[50vh] overflow-hidden">
-            		<img src="{{ page.images.wall | absolute_url }}" class="h-full w-full object-cover object-center"></img>
-			        <div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent"></div>
+	{% include head.liquid %}
+	<body data-theme="light" class="min-h-screen flex flex-col">
+		{% include navbar.liquid %}
+		<main class="flex-1">
+			<div
+				class="min-h-screen flex flex-col"
+				role="banner"
+				aria-label="Hero">
+				<div class="relative h-[65vh] md:h-[50vh] overflow-hidden">
+					<img src="{{ page.images.wall | absolute_url }}" class="h-full w-full object-cover object-center">
+					<div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent"></div>
 				</div>
 				<div class="flex-1 flex justify-center items-center">
 					<div class="p-5">
@@ -16,8 +19,8 @@
 				</div>
 			</div>
 			{{ content }}
-        </main>
-        {% include footer.liquid %}
-    </body>
-    {% page_scripts %}
+		</main>
+		{% include footer.liquid %}
+	</body>
+	{% page_scripts %}
 </html>

@@ -1,5 +1,11 @@
 <div class="collapse collapse-arrow bg-base-200 border border-base-300 {{ include.classes }}" tabindex="0">
-  <input type="radio" name="my-accordion-2" tabindex="-1" {% if include.checked %}checked="checked"{% endif %} />
-  <div class="collapse-title font-semibold" tabindex="-1">{{ include.title }}</div>
-  <div class="collapse-content text-md bg-base-100" tabindex="-1">{{ include.content }}</div>
+	<input
+		type="radio"
+		name="my-accordion-2"
+		tabindex="-1"
+		{% if include.checked %}
+		checked="checked"
+		{% endif %} />
+	<div class="collapse-title font-semibold" tabindex="-1">{{ include.title }}</div>
+	<div class="collapse-content text-md bg-base-100" tabindex="-1">{{ include.content }}</div>
 </div>
