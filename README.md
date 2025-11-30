@@ -1,5 +1,9 @@
 # Oscilloscope 3
 
-Oscilloscope Online is a versatile web-based graphing tool designed to make data visualization quick and intuitive. It supports multiple input formats and provides an easy, streamlined way to convert raw data into clear, informative graphs.
+A completely free, privacy-first, web-based graphing calculator and real-time oscilloscope that runs 100% in your browser.
 
-This is going to be a long project, so for now I'm focussing on only the front-end for the most part. Actual plotting may take place near the end of siege or possibly even later than that. Bear with me.
+Using DaisyUI and TailwindCSS together to create an elegant an sleek Front-End while TypeScript, NodeJS and Docker ensure an accurate and performant CI/CD. This Project is designed to run entirely on the client-side without any active servers, which is why there isn't any Back-End.
+
+Oscilloscope Online turns raw numbers into beautiful, interactive graphs in seconds. Perfect for students exploring functions, engineers monitoring sensors, researchers plotting survey data, or musicians visualizing audio waveforms.
+
+It supports mathematical expressions, manual tables, real-time serial data, microphone/audio files, Google Forms responses and even custom JavaScript — all with a clean, modern interface that works instantlz in anz browser.
