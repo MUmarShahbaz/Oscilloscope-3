@@ -1,23 +1,23 @@
-<footer><div class="footer sm:footer-horizontal bg-base-200 text-base-content border-base-300 border-t p-10">
-  <nav>
+<footer><nav class="footer sm:footer-horizontal bg-base-200 text-base-content border-base-300 border-t p-10">
+  <div aria-label="More Pages">
     <h6 class="footer-title">More</h6>
     <a href="{{ '/' | absolute_url }}" class="link link-hover">Home</a>
     <a href="{{ '/about.html' | absolute_url }}"" class="link link-hover">About</a>
     <a href="{{ '/author.html' | absolute_url }}"" class="link link-hover">Author</a>
-  </nav>
-  <nav>
+  </div>
+  <div aria-label="Plotters">
     <h6 class="footer-title">Plotters</h6>
     {% for this_plotter in site.plotters %}
     <a href="{{ this_plotter.permalink | absolute_url }}" class="link link-hover">{{ this_plotter.title }}</a>
     {% endfor %}
-  </nav>
-  <nav>
+  </div>
+  <div aria-label="Tools">
     <h6 class="footer-title">Tools</h6>
     {% for tool in site.tools %}
     <a href="{{ tool.permalink | absolute_url }}" class="link link-hover">{{ tool.title }}</a>
     {% endfor %}
-  </nav>
-</div>
+  </div>
+</nav>
 <div class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
   <aside class="grid-flow-col items-center">
     <svg

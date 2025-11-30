@@ -4,7 +4,7 @@
     <body data-theme="light" class="min-h-screen flex flex-col">
         {% include navbar.liquid %}
         <main class="flex-1">
-            <header class="min-h-screen flex flex-col" aria-label="Hero">
+            <div class="min-h-screen flex flex-col" role="banner" aria-label="Hero">
             	<div class="relative h-[65vh] md:h-[50vh] overflow-hidden">
             		<img src="{{ page.images.wall | absolute_url }}" class="h-full w-full object-cover object-center"></img>
 			        <div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent"></div>
@@ -14,7 +14,7 @@
 						<h1 class="w-full text-center text-3xl sm:text-6xl sm:m-5">{{ page.title }}</h1>
 					</div>
 				</div>
-			</header>
+			</div>
 			{{ content }}
         </main>
         {% include footer.liquid %}

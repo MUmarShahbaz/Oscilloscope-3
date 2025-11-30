@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<header class="min-h-screen flex flex-col" aria-label="Hero">
+<div class="min-h-screen flex flex-col" role="banner" aria-label="Hero">
 	<div class="relative h-[65vh] md:h-[50vh]">
 		<canvas id="live-graph-effect" class="h-[65vh] md:h-[50vh] w-full"></canvas>
 		<div class="absolute left-0 top-0 h-[65vh] md:h-[50vh] w-full bg-gradient-to-t from-base-100 to-transparent">
@@ -11,65 +11,68 @@ title: Home
 	</div>
 	<div class="flex-1 flex justify-center items-center">
 		<div class="p-5">
-			<h1 class="w-full text-center text-3xl sm:text-6xl sm:m-5">Oscilloscope Online</h1>
-			<p class="w-full text-center text-base sm:text-xl">Anything can be plotted!</p>
+			<h1 class="w-full text-center text-3xl sm:text-6xl sm:m-5" aria-label="Title">{{ site.title }}</h1>
+			<p class="w-full text-center text-base sm:text-xl" aria-label="Motto">{{ site.motto }}</p>
 		</div>
 	</div>
-</header>
+</div>
 
-<hr class="border-0 my-12">
+<hr class="border-0 my-12" aria-hidden="true">
 
 <section id="new_plot" class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="New Plot">
 	<h2 class="text-4xl text-center m-5" data-aos="fade-up">Plot Something!</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-5" role="list" aria-label="Plotters">
 		{% for this_plotter in site.plotters %}
-			<a href="{{ this_plotter.permalink | absolute_url }}" data-aos="fade-up" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
+			<div data-aos="fade-up">
+			<a href="{{ this_plotter.permalink | absolute_url }}" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
 				<img
 					src="{{ this_plotter.images.btn | absolute_url }}"
 					alt="{{ this_plotter.title }}"
 					class="h-[120px] w-[65%] object-cover">
 				<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
 				<div class="group-hover:scale-110 group-focus-visible:scale-110 transition-all duration-300 ease-out absolute inset-y-0 right-5 flex items-center text-end">{{ this_plotter.title }}</div>
-			</a>
+			</a></div>
 		{% endfor %}
 	</div>
 </section>
 
-<hr class="border-t-2 border-base-300 w-9/10 mx-auto my-12">
+<hr class="border-t-2 border-base-300 w-9/10 mx-auto my-12" aria-hidden="true">
 
 <section class="mx-auto my-5 w-9/10 md:w-7/10" aria-label="Toolbox">
 	<h2 class="text-4xl text-center m-5" data-aos="fade-up">Toolbox!</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-5" role="list" aria-label="Other Tools">
 		{% for this_tool in site.tools %}
-			<a href="{{ this_tool.permalink | absolute_url }}" data-aos="fade-up" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
+			<div data-aos="fade-up">
+			<a href="{{ this_tool.permalink | absolute_url }}" class="group hover:scale-105 focus-visible:scale-105 transition-all duration-300 ease-out relative block w-full overflow-hidden rounded-xl border-base-300 border-1">
 				<img
 					src="{{ this_tool.images.btn | absolute_url }}"
 					alt="{{ this_tool.title }}"
 					class="h-[120px] w-[65%] object-cover">
 				<div class="absolute inset-0 bg-gradient-to-r from-transparent from-40% to-base-200 to-60%"></div>
 				<div class="group-hover:scale-110 group-focus-visible:scale-110 transition-all duration-300 ease-out absolute inset-y-0 right-5 flex items-center text-end">{{ this_tool.title }}</div>
-			</a>
+			</a></div>
 		{% endfor %}
 	</div>
 </section>
 
-<hr class="border-0 my-12">
+<hr class="border-0 my-12" aria-hidden="true">
 
-<article class="py-16 px-6 bg-gray-100">
+<article aria-label="More Information" class="py-16 px-6 bg-gray-100">
 	<div class="max-w-4xl mx-auto">
-		<h1 class="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">
-			Oscilloscope Online
-		</h1>
-		<p class="text-xl lg:text-2xl text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up">
-			A completely free, privacy-first, web-based graphing calculator and real-time oscilloscope that runs 100% in your browser.
-		</p>
-
+		<header>
+			<h1 class="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">
+				Oscilloscope Online
+			</h1>
+			<p class="text-xl lg:text-2xl text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up">
+				A completely free, privacy-first, web-based graphing calculator and real-time oscilloscope that runs 100% in your browser.
+			</p>
+		</header>
 		<div class="grid md:grid-cols-2 gap-12 lg:gap-16">
 			<!-- Column 1 -->
 			<div class="space-y-12">
- 				<div>
+ 				<section aria-label="Purpose">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-wave-square"></span> What does it do?
+						<span class="text-3xl fas fa-wave-square" aria-hidden="true"></span> What does it do?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						Oscilloscope Online turns raw numbers into beautiful, interactive graphs in seconds. Perfect for students exploring functions, engineers monitoring sensors, researchers plotting survey data, or musicians visualizing audio waveforms.
@@ -77,11 +80,11 @@ title: Home
 					<p class="text-lg text-gray-700 leading-relaxed mt-4" data-aos="fade-up">
 						It supports mathematical expressions, manual tables, real-time serial data, microphone/audio files, Google Forms responses, and even custom JavaScript — all with a clean, modern interface that works instantly in any browser.
 					</p>
-				</div>
+				</section>
 
-				<div>
+				<section aria-label="Working">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-gear"></span> How does it work?
+						<span class="text-3xl fas fa-gear" aria-hidden="true"></span> How does it work?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						Built with Jekyll + Tailwind CSS + DaisyUI for instant updates and a polished, responsive design. All plotting, data processing, and real-time visualization is written in TypeScript and runs entirely in your browser — no servers, no data upload unless you explicitly save to your own Google Drive.
@@ -89,14 +92,14 @@ title: Home
 					<p class="text-lg text-gray-700 leading-relaxed mt-4" data-aos="fade-up">
 						This client-side architecture delivers maximum speed, complete privacy, and even works offline when possible.
 					</p>
-				</div>
+				</section>
 			</div>
 
 			<!-- Column 2 -->
 			<div class="space-y-12">
-				<div>
+				<section aria-label="Payments">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-credit-card"></span> What does it cost?
+						<span class="text-3xl fas fa-credit-card" aria-hidden="true"></span> What does it cost?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						Absolutely nothing — forever. No ads, no paywalls, no subscriptions, no feature locks. Every tool, export option, and plotter is 100% free for everyone.
@@ -104,11 +107,11 @@ title: Home
 					<p class="text-lg text-gray-700 leading-relaxed mt-4" data-aos="fade-up">
 						This project exists to give back to the education, maker, and open-source communities.
 					</p>
-				</div>
+				</section>
 
-				<div>
+				<section aria-label="Security">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3" data-aos="fade-up">
-						<span class="text-3xl fas fa-user-lock"></span> How secure & private is it?
+						<span class="text-3xl fas fa-user-lock" aria-hidden="true"></span> How secure & private is it?
 					</h2>
 					<p class="text-lg text-gray-700 leading-relaxed" data-aos="fade-up">
 						The site is completely static: plain HTML/CSS/JS served from a CDN. There is no backend, no database, and no server-side code that could ever be compromised.
@@ -116,19 +119,19 @@ title: Home
 					<p class="text-lg text-gray-700 leading-relaxed mt-4" data-aos="fade-up">
 						Your data never leaves your device unless you deliberately connect your own Google account (and even then, only you have access). Ideal for sensitive measurements, proprietary data, or classroom use.
 					</p>
-				</div>
+				</section>
 			</div>
 		</div>
 
-		<div class="mt-16 text-center">
-			<a href="{{ '/index.html#new_plot' | absolute_url }}" data-aos="fade-up" class="inline-flex items-center px-8 py-4 bg-black text-white font-medium rounded-xl hover:bg-gray-800 transition shadow-lg text-lg">
+		<div class="mt-16 text-center" role="button" data-aos="fade-up">
+			<a href="{{ '/index.html#new_plot' | absolute_url }}" class="inline-flex items-center px-8 py-4 bg-black text-white font-medium rounded-xl hover:bg-gray-800 transition shadow-lg text-lg">
 				Start Plotting!!
 			</a>
 		</div>
 	</div>
 </article>
 
-<hr class="border-0 my-30">
+<hr class="border-0 my-30" aria-hidden="true">
 
 {% script %}
 <script>
